@@ -13,8 +13,9 @@ public class YourClassName extends OpMode {
       arm_motor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
     }
     public void loop() {
-      float left_power = gamepad1.left_stick_y;
-      float right_power = -1 * gamepad1.right_stick_y;
+      float left_front_power = gamepad1.left_stick_y;
+      float right_front_power = -1 * gamepad1.left_stick_x;
+      float left_back_power = gamepad1.left_stick_y;
       left_drive.setPower(left_power);
       right_drive.setPower(right_power);
     }
